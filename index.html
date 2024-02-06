@@ -169,7 +169,7 @@
     </h2>
     <pre class="idl">
     partial dictionary CredentialRequestOptions {
-      sequence&lt;IdentityRequestProvider&gt; providers;
+      sequence&lt;IdentityRequestDetails&gt; providers;
     };
     </pre>
     <h3>
@@ -182,15 +182,15 @@
       provider=].
     </p>
     <h2>
-      The `IdentityRequestProvider` dictionary
+      The `IdentityRequestDetails` dictionary
     </h2>
     <p>
-      The {{IdentityRequestProvider}} dictionary is used to specify a [=digital
+      The {{IdentityRequestDetails}} dictionary is used to specify a [=digital
       identity/request protocol=] and structured request, which the user agent
       MAY match against a [=identity credential provider=].
     </p>
     <pre class="idl">
-    dictionary IdentityRequestProvider {
+    dictionary IdentityRequestDetails {
       required DOMString protocol;
       required DOMString request;
     };
@@ -199,12 +199,12 @@
       The `protocol` member
     </h3>
     <p>
-      The <dfn data-dfn-for="IdentityRequestProvider">protocol</dfn> member
+      The <dfn data-dfn-for="IdentityRequestDetails">protocol</dfn> member
       denotes the [=digital identity/request protocol=] when requesting an
       identify credential.
     </p>
     <p>
-      The {{IdentityRequestProvider/protocol}} member's value is be one of the
+      The {{IdentityRequestDetails/protocol}} member's value is be one of the
       well-defined keys defined in [[[#protocol-registry]]] or any other custom
       one.
     </p>
@@ -212,7 +212,7 @@
       The `request` member
     </h3>
     <p>
-      The <dfn data-dfn-for="IdentityRequestProvider">request</dfn> member is
+      The <dfn data-dfn-for="IdentityRequestDetails">request</dfn> member is
       the request to be handled by the user's selected [=identity credential
       provider=].
     </p>
